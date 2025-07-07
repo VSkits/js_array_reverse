@@ -18,11 +18,19 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse([''])).toEqual(['']);
   });
 
-  it(`should keep original length of the words in order`, () => {
+  it(`should keep original length of the first word`, () => {
     const input = ['Mate', 'Academy'];
     const result = arrayReverse(input);
 
     expect(result[0].length)
       .toBe(4);
+  });
+
+  it(`should keep original length of the last word`, () => {
+    const input = ['Mate', 'Academy'];
+    const result = arrayReverse(input);
+
+    expect(result[1].length)
+      .toBe(7);
   });
 });
